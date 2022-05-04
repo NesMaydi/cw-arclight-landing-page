@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bitter', serif;
+    background-color: #413DF6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.first-main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% auto 5% auto;
+    max-width: 95%;
+    min-height: 1369px;
+    background: linear-gradient(180deg, #FFFFFF 26.1%, #F2F5FA 110.16%);
+
+    .main-navbar {
+        width: 90%;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-presentation {
+        width: 90%;
+        min-height: 887px;
+        display: flex;
+        flex-direction: column;
+
+        .presentation-map {
+            margin: 0 auto;
+            width: 80%;
+            min-height: 372px;
+            background-image: url(assets/Map.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .main-information-card {
+            min-height: 514px;
+            width: 100%;
+
+            h1 {
+                line-height: 2rem;
+                width: 100%;
+                font-size: 2rem;
+            }
+
+            p {
+                margin: 4% auto 4% auto;
+                line-height: 150%;
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            .buttons-display {
+
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                min-height: 142px;
+                align-items: center;
+                justify-content: space-between;
+
+                .main-buttons {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    min-height: 63px;
+
+                    &.started {
+                        background-color: #242DFE;
+                        color: #FFF;
+                        gap: 1%;
+                    }
+
+                    &.working {
+                        gap: 4%;
+                        color: #595959;
+                        background-color: #FFF;
+                    }
+                }
+            }
+
+            .ratings-display {
+                display: flex;
+                margin: 5% auto 10% auto;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                min-height: 67px;
+                align-items: center;
+
+                .stars-container {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5%;
+                }
+
+                .five-text {
+                    width: 100%;
+
+                    span {
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-logos {
+        margin: 0 auto;
+        width: 90%;
+        min-height: 288px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+
+        img {
+            opacity: 0.5;
+            max-width: 50%;
+            min-height: 72px;
+        }
+    }
+
+}
+
+.second-section {
+    max-width: 85%;
+    min-height: 722px;
+    margin: 15% auto 0 auto;
+
+    .second-section-text-card {
+        width: 100%;
+        min-height: 422px;
+        display: column;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+
+
+        .first-text-item {
+            width: 100%;
+            min-height: 218px;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-size: 2.5rem;
+                line-height: 120%;
+                margin-bottom: 1%;
+            }
+
+            p {
+                line-height: 140%;
+            }
+        }
+
+        .second-text-item {
+
+            .functionality {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 4%;
+
+                p {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}
