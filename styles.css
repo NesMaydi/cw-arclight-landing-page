@@ -10,11 +10,86 @@
 
 body {
   font-family: 'Bitter', serif;
-  background-color: #413DF6;
+  background-color: #242DFE;
+  overflow-x: hidden;
 }
 
 a {
+  color: #E7E8FE;
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.functionality {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4%;
+}
+
+.functionality p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.advantage-target-card {
+  min-height: 169px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.suscribe-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 58px;
+  min-width: 281px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.suscribe-btn.white-btn {
+  background-color: #E7E8FE;
+  color: #242DFE;
+}
+
+.suscribe-btn.blue-btn {
+  background-color: #242DFE;
+  color: #E7E8FE;
 }
 
 .first-main-section {
@@ -69,6 +144,65 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  position: relative;
+}
+
+.first-main-section .main-presentation .presentation-map .user-card {
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 100px rgba(36, 45, 254, 0.2);
+          box-shadow: 0px 4px 100px rgba(36, 45, 254, 0.2);
+  border-radius: 5px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 127.52px;
+}
+
+.first-main-section .main-presentation .presentation-map .user-card .user-img {
+  max-height: 36px;
+}
+
+.first-main-section .main-presentation .presentation-map .user-card p {
+  font-size: 0.7rem;
+}
+
+.first-main-section .main-presentation .presentation-map .user-card .country {
+  font-weight: 700;
+}
+
+.first-main-section .main-presentation .presentation-map .user-card.user-card1 {
+  min-width: 126.43px;
+  -webkit-transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
+          transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
+  left: 60%;
+  top: 48%;
+}
+
+.first-main-section .main-presentation .presentation-map .user-card.user-card2 {
+  left: 40%;
+  top: -7%;
+  -webkit-transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
+          transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
+  min-width: 96.14px;
+}
+
+.first-main-section .main-presentation .presentation-map .user-card.user-card3 {
+  -webkit-transform: matrix(0.98, 0.22, -0.2, 0.98, 0, 0);
+          transform: matrix(0.98, 0.22, -0.2, 0.98, 0, 0);
+  left: 3%;
+  top: 33%;
+  min-width: 141.83px;
 }
 
 .first-main-section .main-presentation .main-information-card {
@@ -199,32 +333,21 @@ a {
 .second-section {
   max-width: 85%;
   min-height: 722px;
-  margin: 15% auto 0 auto;
+  margin: 15% auto -1% auto;
+  position: relative;
 }
 
 .second-section .second-section-text-card {
   width: 100%;
   min-height: 422px;
-  display: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #FFF;
+  margin-bottom: 10%;
 }
 
 .second-section .second-section-text-card .first-text-item {
   width: 100%;
   min-height: 218px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin-bottom: 4%;
 }
 
 .second-section .second-section-text-card .first-text-item h2 {
@@ -237,25 +360,220 @@ a {
   line-height: 140%;
 }
 
-.second-section .second-section-text-card .second-text-item .functionality {
+.second-section .second-section-text-card .second-text-item {
+  width: 100%;
+  min-height: 168px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.second-section .img-card {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 264px;
+  margin-bottom: 1.2%;
+}
+
+.third-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 4%;
+  margin: -3px auto 5% auto;
+  width: 100%;
+  min-height: 1369px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(26.1%, #FFFFFF), color-stop(110.16%, #F2F5FA));
+  background: linear-gradient(180deg, #FFFFFF 26.1%, #F2F5FA 110.16%);
 }
 
-.second-section .second-section-text-card .second-text-item .functionality p {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.third-section .third-section-target {
+  margin: 5% auto 1% auto;
+  width: 90%;
+  min-height: 790px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #FFF;
+}
+
+.third-section .third-section-target .target-card {
+  width: 100%;
+  margin: 0 auto 6% auto;
+  background-color: #242DFE;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.third-section .third-section-target .target-card h3 {
+  font-weight: 400;
+  font-size: 1.9rem;
+}
+
+.third-section .third-section-target .target-card p {
+  line-height: 1.7rem;
+}
+
+.third-section .third-section-target .target-card.startups {
+  min-height: 412px;
+}
+
+.third-section .third-section-target .target-card.enterprises {
+  min-height: 358px;
+}
+
+.third-section .third-section-prices {
+  min-height: 1515px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.third-section .third-section-prices .price-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+}
+
+.third-section .third-section-prices .price-card .price-tag {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.third-section .third-section-prices .price-card h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.third-section .third-section-prices .price-card.white {
+  max-width: 281px;
+  min-height: 406px;
+  color: #595959;
+}
+
+.third-section .third-section-prices .price-card.blue {
+  min-width: 100%;
+  min-height: 479px;
+  background-color: #242DFE;
+  padding: 5%;
+}
+
+.footer-section {
+  min-height: 1057px;
+  width: 100%;
+}
+
+.footer-section .footer-section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 897px;
+  width: 90%;
+  margin: 10% auto;
+  color: #F2F5FA;
+}
+
+.footer-section .footer-section-content .logo-footer {
+  max-height: 24px;
+}
+
+.footer-section .footer-section-content p {
+  line-height: 27px;
+}
+
+.footer-section .footer-section-content .footer-section-links {
+  min-height: 685px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-section .footer-section-content .footer-section-links .links-categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 130px;
+}
+
+.footer-section .footer-section-content .footer-section-links .links-categories .categories {
+  font-weight: 400;
+}
+
+.footer-section .footer-section-content .footer-section-links .links-categories .footer-links {
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 20.11px;
 }
 /*# sourceMappingURL=styles.css.map */
