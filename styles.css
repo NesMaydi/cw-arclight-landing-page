@@ -100,6 +100,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -134,6 +137,14 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+  .first-main-section .main-presentation {
+    min-height: 989px;
+  }
 }
 
 .first-main-section .main-presentation .presentation-map {
@@ -169,6 +180,18 @@ p {
   min-height: 127.52px;
 }
 
+@media screen and (max-width: 320px) {
+  .first-main-section .main-presentation .presentation-map .user-card {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .first-main-section .main-presentation .presentation-map .user-card {
+    min-height: 100px;
+  }
+}
+
 .first-main-section .main-presentation .presentation-map .user-card .user-img {
   max-height: 36px;
 }
@@ -185,29 +208,64 @@ p {
   min-width: 126.43px;
   -webkit-transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
           transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
-  left: 60%;
-  top: 48%;
+  left: 50%;
+  top: 38%;
+}
+
+@media screen and (max-width: 375px) {
+  .first-main-section .main-presentation .presentation-map .user-card.user-card1 {
+    top: 40%;
+    left: 50%;
+  }
 }
 
 .first-main-section .main-presentation .presentation-map .user-card.user-card2 {
   left: 40%;
-  top: -7%;
+  bottom: 70%;
   -webkit-transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
           transform: matrix(0.97, -0.27, 0.24, 0.96, 0, 0);
   min-width: 96.14px;
 }
 
+@media screen and (max-width: 375px) {
+  .first-main-section .main-presentation .presentation-map .user-card.user-card2 {
+    top: 1%;
+  }
+}
+
 .first-main-section .main-presentation .presentation-map .user-card.user-card3 {
   -webkit-transform: matrix(0.98, 0.22, -0.2, 0.98, 0, 0);
           transform: matrix(0.98, 0.22, -0.2, 0.98, 0, 0);
-  left: 3%;
+  right: 60%;
   top: 33%;
-  min-width: 141.83px;
+  min-width: 126.43px;
+}
+
+@media screen and (max-width: 375px) {
+  .first-main-section .main-presentation .presentation-map .user-card.user-card3 {
+    left: -10%;
+  }
 }
 
 .first-main-section .main-presentation .main-information-card {
   min-height: 514px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .first-main-section .main-presentation .main-information-card {
+    max-height: 440px;
+  }
 }
 
 .first-main-section .main-presentation .main-information-card h1 {
@@ -221,6 +279,12 @@ p {
   line-height: 150%;
   width: 100%;
   font-size: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  .first-main-section .main-presentation .main-information-card p {
+    margin: 0;
+  }
 }
 
 .first-main-section .main-presentation .main-information-card .buttons-display {
@@ -239,6 +303,17 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .first-main-section .main-presentation .main-information-card .buttons-display {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 439px;
+    min-height: 63px;
+  }
 }
 
 .first-main-section .main-presentation .main-information-card .buttons-display .main-buttons {
@@ -262,6 +337,7 @@ p {
 }
 
 .first-main-section .main-presentation .main-information-card .buttons-display .main-buttons.working {
+  width: 100%;
   gap: 4%;
   color: #595959;
   background-color: #FFF;
@@ -271,7 +347,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 5% auto 10% auto;
+  margin: 5% auto 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -282,6 +358,20 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .first-main-section .main-presentation .main-information-card .ratings-display {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 382px;
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .first-main-section .main-presentation .main-information-card .ratings-display .stars-container {
@@ -295,8 +385,22 @@ p {
   gap: 5%;
 }
 
+@media screen and (min-width: 768px) {
+  .first-main-section .main-presentation .main-information-card .ratings-display .stars-container {
+    gap: 4%;
+    margin-right: 1%;
+  }
+}
+
 .first-main-section .main-presentation .main-information-card .ratings-display .five-text {
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .first-main-section .main-presentation .main-information-card .ratings-display .five-text {
+    min-width: 230px;
+    margin: 0 0 0 1%;
+  }
 }
 
 .first-main-section .main-presentation .main-information-card .ratings-display .five-text span {
@@ -315,13 +419,19 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media screen and (max-width: 375px) {
+  .first-main-section .main-logos {
+    width: 100%;
+    gap: 1%;
+  }
 }
 
 .first-main-section .main-logos img {
