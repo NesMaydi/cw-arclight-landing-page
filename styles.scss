@@ -75,15 +75,16 @@ p {
     font-size: 0.9rem;
     border-radius: 5px;
 
-    &.white-btn {
-        background-color: #E7E8FE;
-        color: #242DFE;
-    }
+   
+}
+.white-btn {
+    background-color: #E7E8FE;
+    color: #242DFE;
+}
 
-    &.blue-btn {
-        background-color: #242DFE;
-        color: #E7E8FE;
-    }
+.blue-btn {
+    background-color: #242DFE;
+    color: #E7E8FE;
 }
 
 // Sections styles
@@ -91,7 +92,7 @@ p {
 .first-main-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 2% auto 5% auto;
     max-width: 95%;
@@ -100,18 +101,28 @@ p {
 
     @media screen and (min-width: 1024px) {
         min-height: 820px;
-        justify-content: space-around;
     }
 
     .main-navbar {
         width: 90%;
+        min-height: 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        justify-items: center;
+     
 
+        @media screen and (min-width: 768px) {
+            min-height: 64px;
+
+        }
         .off-mob-tab{
             display: none;
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
         
         .off-desktop{
@@ -406,8 +417,13 @@ p {
         min-height: 480px;
         align-items: flex-end;
         justify-items: center;
+        justify-content: space-around;
         margin: auto;
         column-gap: 5%;
+    }
+
+    @media screen and (min-width : 1440px) {
+        justify-content: space-evenly;
     }
 
     .second-section-text-card {
@@ -609,6 +625,8 @@ p {
             min-height: 891px;
             flex-flow: row wrap;
             justify-content: space-between;
+            margin-bottom: 5%;
+
         }
 
         @media screen and (min-width: 1024px) {
@@ -673,10 +691,11 @@ p {
             }
 
             &.blue {
-                max-width: 353px;
+                min-width: 95%;
+                min-width: 353px;
                 min-height: 479px;
                 background-color: #242DFE;
-                padding: 5%;
+                padding: 6%;
                 color: #E7E8FE;
 
 
@@ -784,5 +803,32 @@ max-width: 99%;
 }
 
 
+ 
 
 // Media queries
+
+@media screen and (min-width: 1024px) {
+    
+    .main-navbar{
+    
+    .navbar-links{
+    min-width: 233px;
+    min-height: 100%;
+text-align: center;
+.links{
+color: #595959;
+font-size: 0.9rem;
+padding: 3%;
+}   
+}
+
+.main-buttons{
+    
+text-align: center;  
+    min-width: 227px;
+    min-height: 63px;
+    font-size: 0.9rem;
+    justify-items: baseline;
+}
+}
+}

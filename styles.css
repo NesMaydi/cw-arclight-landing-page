@@ -82,12 +82,12 @@ p {
   border-radius: 5px;
 }
 
-.suscribe-btn.white-btn {
+.white-btn {
   background-color: #E7E8FE;
   color: #242DFE;
 }
 
-.suscribe-btn.blue-btn {
+.blue-btn {
   background-color: #242DFE;
   color: #E7E8FE;
 }
@@ -100,8 +100,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -115,13 +116,12 @@ p {
 @media screen and (min-width: 1024px) {
   .first-main-section {
     min-height: 820px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
 }
 
 .first-main-section .main-navbar {
   width: 90%;
+  min-height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,11 +131,30 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .first-main-section .main-navbar {
+    min-height: 64px;
+  }
 }
 
 .first-main-section .main-navbar .off-mob-tab {
   display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .first-main-section .main-navbar .off-mob-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -529,9 +548,19 @@ p {
         -ms-flex-align: end;
             align-items: flex-end;
     justify-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin: auto;
     -webkit-column-gap: 5%;
             column-gap: 5%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .second-section {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -818,6 +847,7 @@ p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-bottom: 5%;
   }
 }
 
@@ -910,10 +940,11 @@ p {
 }
 
 .third-section .third-section-prices .price-card.blue {
-  max-width: 353px;
+  min-width: 95%;
+  min-width: 353px;
   min-height: 479px;
   background-color: #242DFE;
-  padding: 5%;
+  padding: 6%;
   color: #E7E8FE;
 }
 
@@ -1062,6 +1093,26 @@ p {
   .footer-txt-content {
     min-width: 350px;
     max-width: 429px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-navbar .navbar-links {
+    min-width: 233px;
+    min-height: 100%;
+    text-align: center;
+  }
+  .main-navbar .navbar-links .links {
+    color: #595959;
+    font-size: 0.9rem;
+    padding: 3%;
+  }
+  .main-navbar .main-buttons {
+    text-align: center;
+    min-width: 227px;
+    min-height: 63px;
+    font-size: 0.9rem;
+    justify-items: baseline;
   }
 }
 /*# sourceMappingURL=styles.css.map */
